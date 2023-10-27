@@ -11,9 +11,9 @@ import uuid
 @st.cache_data
 def load_data():
     #path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/contentDashboard/data/"
-    #path = "./data/"
-    path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/"
-    file_name = "Personality Datums.xlsx"
+    path = "./data/"
+    #path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/"
+    file_name = "sample_datums.xlsx"
     df = pd.read_excel(path+file_name, engine='openpyxl')
     # rename column
     df.rename(columns={'Unnamed: 0': 'uuid', 'Unnamed: 8' :'updated_at'}, inplace=True)
@@ -79,8 +79,8 @@ def display_statistics(df):
 def save_excel(df):
     if st.button("Save Content",type="primary"):
         path = "./data/"
-        path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/"
-        file_name = "Personality Datums.xlsx"
+        #path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/"
+        file_name = "sample_datums.xlsx"
         df.to_excel(path+file_name, index=False, engine='openpyxl')
         st.write("Excel file saved!")
   
