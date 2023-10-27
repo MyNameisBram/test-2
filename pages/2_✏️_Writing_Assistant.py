@@ -65,8 +65,8 @@ def degrees_to_disc_type(degrees):
 @st.cache_data
 def load_data_wa():
     #path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/contentDashboard/data/"
-    #path = "./data/"
-    path ="/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/Crystal DISC Email Suggestion Model.xlsx"
+    path = "./data/sample_sugggestion.xlsx"
+    #path ="/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/Crystal DISC Email Suggestion Model.xlsx"
     wa_df = pd.read_excel(path, engine='openpyxl')
     # add DISC type column
     wa_df["DiSC Type"] = wa_df["degrees"].apply(lambda x: degrees_to_disc_type(x))
@@ -255,7 +255,8 @@ def delete_row(wa_df):
 # function to save edited data
 def save_excel(wa_df):
     if st.button("Save Content",type="primary"):
-        path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/Crystal DISC Email Suggestion Model.xlsx"
+        #path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/Crystal DISC Email Suggestion Model.xlsx"
+        path = "/.data/sample_suggestions.xlsx"
         wa_df.to_excel(path, index=False, engine='openpyxl')
         st.write("Excel file saved!")
 
