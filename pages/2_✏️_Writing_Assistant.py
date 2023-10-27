@@ -65,7 +65,7 @@ def degrees_to_disc_type(degrees):
 @st.cache_data
 def load_data_wa():
     #path = "/Users/bramtunggala/CrystalKnows/ml-models/local/github/contentDashboard/data/"
-    path = "./data/sample_suggestion.xlsx"
+    path = "./data/sample_suggestions.xlsx"
     #path ="/Users/bramtunggala/CrystalKnows/ml-models/local/github/crystal-app/data/Crystal DISC Email Suggestion Model.xlsx"
     wa_df = pd.read_excel(path, engine='openpyxl')
     # add DISC type column
