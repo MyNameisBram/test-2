@@ -1,4 +1,12 @@
-streamlit
 pandas
 openpyxl
 uuid
+# drewbot requirements
+streamlit-chat
+streamlit-authenticator
+streamlit-feedback
+streamlit>=1.26.0
+langchain>=0.0.217
+openai
+pinecone-client>= 2.2.0
+Pillow
